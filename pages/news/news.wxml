@@ -1,0 +1,11 @@
+<!--pages/news/news.wxml-->
+<view class="weui-panel__bd">
+  <block wx:for="{{newsList}}" wx:for-item="news">
+    <navigator url="../test1/test1?moduleId={{news.Id}}" class="weui-media-box_appmsg" hover-class="weui-cell_active">
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">{{news.title}}</view>
+        <view class="weui-media-box__desc">{{news.content}}</view>
+      </view>
+    </navigator>
+  </block>
+</view>

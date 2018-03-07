@@ -1,0 +1,48 @@
+<!--pages/user/user.wxml-->
+<view class="weui-cell">
+  <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+    <image src="{{ headimgurl }}" style="width: 50px; height: 50px; display: block"/>
+  </view>
+  <view class="weui-cell__bd">
+    <view>{{ nickname }}</view>
+    <view style="font-size: 13px;color: #888888;">手机：{{ mobile }}</view>
+  </view>
+</view>
+<view class="ls_line_block"></view>
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-grids">
+      <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="../../images/class.png" />
+        <view class="weui-grid__label">个人档案</view>
+      </navigator>
+      <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="../../images/class.png" />
+        <view class="weui-grid__label">在线问诊</view>
+      </navigator>
+      <navigator bindtap="makePhone" url="" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="../../images/class.png" />
+        <view class="weui-grid__label">电话咨询</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class="ls_line_block"></view>
+<view class="weui-cells weui-cells_after-title">
+    <navigator url="../doctorList/doctorList" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">医生介绍</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">科室介绍</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">意见反馈</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="../test1/test1?moduleId=3" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">联系我们</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+</view>

@@ -1,0 +1,14 @@
+<!--pages/news/news.wxml-->
+<block wx:for='{{doctorList}}' wx:key='*this'>
+  <view class="weui-cell">
+    <navigator url="../test1/test1?moduleId={{item.Id}}" class="weui-media-box_appmsg" hover-class="weui-cell_active">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+        <image src="{{item.image}}" style="width: 50px; height: 50px; display: block"/>
+      </view>
+      <view class="weui-cell__bd">
+        <view>{{item.title}}</view>
+        <view style="font-size: 13px;color: #888888;">{{item.abstract}}</view>
+      </view>
+    </navigator>
+  </view>
+</block>

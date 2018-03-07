@@ -1,0 +1,51 @@
+<!--pages/test/test.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image image_1"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="ls_line_block"></view>
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-grids">
+            <navigator url="../test1/test1?moduleId=1" class="weui-grid" hover-class="weui-grid_active">
+              <image class="weui-grid__icon" src="../../images/class.png" />
+              <view class="weui-grid__label">医院介绍</view>
+            </navigator>
+            <navigator url="../doctorList/doctorList?moduleId=2" class="weui-grid" hover-class="weui-grid_active">
+              <image class="weui-grid__icon" src="../../images/class.png" />
+              <view class="weui-grid__label">医生介绍</view>
+            </navigator>
+            <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+              <image class="weui-grid__icon" src="../../images/class.png" />
+              <view class="weui-grid__label">在线问诊</view>
+            </navigator>
+            <navigator url="../doc/doc" class="weui-grid" hover-class="weui-grid_active">
+              <image class="weui-grid__icon" src="../../images/class.png" />
+              <view class="weui-grid__label">个人档案</view>
+            </navigator>
+            <navigator url="../navigation/navigation" class="weui-grid" hover-class="weui-grid_active">
+              <image class="weui-grid__icon" src="../../images/class.png" />
+              <view class="weui-grid__label">院内导航</view>
+            </navigator>
+            <navigator bindtap='makePhone' url="" class="weui-grid" hover-class="weui-grid_active">
+              <image class="weui-grid__icon" src="../../images/class.png" />
+              <view class="weui-grid__label">电话咨询</view>
+            </navigator>
+        </view>
+    </view>
+</view>
+<view class="ls_line_block"></view>
+<view class="weui-panel__bd">
+  <block wx:for="{{example}}" wx:for-item="exInfo" wx:key="*this">
+    <navigator url="../test1/test1?moduleId={{exInfo.Id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">{{exInfo.title}}</view>
+        <view class="weui-media-box__desc">{{exInfo.abstract}}</view>
+      </view>
+    </navigator>
+  </block>
+</view>
